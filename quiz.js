@@ -3,6 +3,7 @@ const URL = "https://opentdb.com/api.php?amount=5&category=19&difficulty=easy&ty
 const questions = document.querySelector(".question-container");
 const choices = document.querySelector("#option-buttons");
 const next = document.querySelector(".NEXT");
+const exit = document.querySelector(".EXIT");
 let counter=0;
 
 let currentindex = 0;
@@ -25,7 +26,11 @@ function printData(){
     printData();
     getChoices();
     }
-)
+);
+
+exit.addEventListener("click", ()=>{
+    alert(`Your Final Score is ${counter}`)
+});
 
 function getChoices(){
     let allAnswers = [...quizzes[currentindex].incorrect_answers, quizzes[currentindex].correct_answer];
