@@ -54,6 +54,9 @@ function checkAnswer(selectedAnswer){
     }else {
         alert(`WRONG! The correct answer is: ${correctAnswer}`);
     }
+    currentindex ++;
+    printData();
+    getChoices();
 }
 
 
