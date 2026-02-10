@@ -31,7 +31,7 @@ function printData(){
 exit.addEventListener("click", ()=>{
     alert(`Your Final Score is ${counter}`)
     counter=0;
-    document.querySelector("#counter")=counter;
+    document.querySelector("#counter").innerText=counter;
 });
 
 function getChoices(){
